@@ -1,0 +1,12 @@
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: activating (auto-restart) (Result: exit-code) since Fri 2025-03-14 17:17:57 UTC; 6s ago
+       Docs: https://kubernetes.io/docs/
+    Process: 8224 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 8224 (code=exited, status=1/FAILURE)
+        CPU: 233ms
+
+mars 14 17:17:57 worker01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mkubelet.service: Main process exited, code=exited, status=1/FAILURE[0m
+mars 14 17:17:57 worker01 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mkubelet.service: Failed with result 'exit-code'.[0m

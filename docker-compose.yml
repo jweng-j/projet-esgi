@@ -8,15 +8,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: db_paymybuddy
-    volumes:
-      - db_data:/var/lib/mysql
-      - ./initdb:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
 
   paymybuddy-backend:
-    build:
-            context: .
+    image: jeanlou874/paymybuddy-db
     container_name: paymybuddy-backend
     restart: always
     depends_on:
@@ -29,5 +25,3 @@ services:
       - "8080:8080"
     expose:
       - 8080
-volumes:
-  db_data:
