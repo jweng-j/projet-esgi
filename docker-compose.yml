@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   paymybuddy-db:
-    image: mysql:8.4
+    image: mysql:latest
     container_name: paymybuddy-db
     restart: always
     environment:
@@ -31,4 +31,3 @@ services:
       - 8080
 volumes:
   db_data:
-
